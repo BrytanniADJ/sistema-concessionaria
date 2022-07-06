@@ -20,3 +20,17 @@ Quando fazemos a mudança do **Major**, os outros serão zerados.
 
 Quando mudamos o **Minor**, o **Patch** é zerado.
 *Ex.:* V1.1.5 -> V1.2.0
+
+# ChangeLog
+
+* **Added** : Quando adicionamos uma nova funcionalidade.
+
+* **Changed** : Alteração na funcionalidade.
+
+* **Deprecated** : Funcionalidade que será removida em outra versão.
+
+* **Removed** : remove uma funcionalidade.
+
+* **Fixed** : Quando corrigimos algum bug.
+
+* **Security** :  Casos de Vulnerabilidade.
