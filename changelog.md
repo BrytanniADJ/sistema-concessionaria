@@ -1,6 +1,11 @@
 # ChangeLog
 
-## [v1.1.0 (06-07-2022)](https://github.com/BrytanniADJ/sistema-concessionaria/releases/tag/v1.0.1)
+##[v1.1.1 (06-07-2022)]()
+
+### Fixed
+* Correção da valida login
+
+## [v1.0.1 (06-07-2022)](https://github.com/BrytanniADJ/sistema-concessionaria/releases/tag/v1.0.1)
 ### Added
 * Adicionado *Login* no sistema
 
