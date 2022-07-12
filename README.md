@@ -1,5 +1,7 @@
 # Sistema Concessionária
 
+Histórico de atualizações do sistema disponível no [CHANGELOG.](https://github.com/BrytanniADJ/sistema-concessionaria/blob/main/changelog.md)
+
 ## Requisitos mínimos
 * PHP
 * MariaDB

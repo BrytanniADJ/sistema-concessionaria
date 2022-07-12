@@ -25,6 +25,8 @@ if (isset($_GET) && isset($_GET['username'])) {
         </figure>
         <ul>
             <li> <a href="./">Home</a></li>
+            <li> <a href="./users/cadastra.php">Cadastra Usuário</a></li>
+            <li> <a href="./users/lista.php">Lista Usuário</a></li>
         </ul>
     </header>
     <main>
