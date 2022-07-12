@@ -38,9 +38,38 @@ CREATE TABLE concessionaria.users(
 )
 ENGINE=utf8mb4
 DEFALT CHARSET=utf8mb4_general_ci;
+COLLATE=utf8mb4_general_ci;
 ```
 
 5) Insira o usuário Admin *(teste)* no sistema.
 ``` INSERT INTO users (login, password, nome, tipo) VALUES ('admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrador', 1); ```
 
 6) **Login:** admin **Senha:** admin
+
+## Deploy
+Para o Deploy, foi escolhido o servidor do [InfinityFree](https://www.infinityfree.net), por ser um servidor que possui *PHP* e banco de dados *MySql/MariaDB*, necessário para execuçãp do nosso sistema e por ser um servidor gratuito.
+
+Sendo necessário, previamente possuir uma conta no mesmo e acesso ao painel de um domínio, criado no servidor do [InfinityFree](https://app.infinityfree.net/accounts)
+
+### Banco de dados
+* Criar um banco de dados no servidor do InfinityFree.
+* Criar as tabelas no servidor do InfinityFree, conforme as descrições das tabelas no passo [Sobre banco de dados](https://github.com/BrytanniADJ/sistema-concessionaria#sobre-o-banco-de-dados)
+
+### Variáveis do Secret
+Será necessário adicionar as variáveis de ambiente no Secrets do Github, para a realização do deply automatizado, [disponível aqui](https://github.com/BrytanniADJ/sistema-concessionaria/blob/main/.github/workflows/deploy.yml)
+
+* ***DB_DATABASE***: Referente ao nome do banco de dados a ser criado no InfinityFree
+
+* ***DB_HOST***: Referente *URL* do servidor do banco de dados criado no InfinityFree
+
+* ***DB_PASS***: referente a senha utilizada para acessar o banco de dados criado no InfinityFree
+
+* ***DB_USER***: Referente ao usuário utilizado para acessar o banco de dados criado no InfinityFree
+
+* ***FTP_HOST***: Referente a *URL* do servidor *FTP*, para envio dos arquivos para o servidor do InfinityFree
+
+* ***FTP_PASS***: Referente a senha utilizada para envio dos arquivos ao servidor do InfinityFree
+
+* ***FTP_USER***: Referente ao usuário utilizado para envio dos arquivos ao Servidor do InfinityFree, via *FTP*
+
+Sistema disponível [http://acai.epizy.com](http://acai.epizy.com)
