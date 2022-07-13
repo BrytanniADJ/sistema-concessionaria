@@ -1,7 +1,6 @@
 name: 🚀 Deploy website on push
 
 on:
-
   pull_request:
     branches:
       - develop
@@ -45,8 +44,12 @@ jobs:
         id: set_local_dir
         env:
           BRANCH_NAME: ${{steps.extract_branch.outputs.name}}
-        run: echo "::set-output name=name::htdocs/"$BRANCH_NAME"/"
-
+        run: |
+          if [ ${{github.event_name}} == 'push' ] ; then
+            echo "::set-output name=name::htdocs/"
+          else
+            echo "::set-output name=name::htdocs/"$BRANCH_NAME"/"
+          fi
       - name: Print local dir
         env:
           LOCAL_DIR: ${{steps.set_local_dir.outputs.name}}

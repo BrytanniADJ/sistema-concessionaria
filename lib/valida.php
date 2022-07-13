@@ -1,5 +1,6 @@
 <?php
 include 'mysql.php';
+include 'utils.php';
 
 // post de login
 if (isset($_POST) && isset($_POST['login']) && isset($_POST['password'])) {
@@ -41,4 +42,10 @@ if(isset($_GET) && isset($_GET['edita'])){
         editUser($id,$name,$login,$typeUser);
 
     }
+}
+
+if(isset($_GET) && isset($_GET['logout'])){
+    session_start();
+    session_destroy();
+    header("Location: ../");
 }

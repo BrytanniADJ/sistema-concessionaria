@@ -1,5 +1,12 @@
+<?php
+include './lib/utils.php';
+$login = verificaSession();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +15,27 @@
     <link rel="stylesheet" href="./assets/css/stilo.css">
     <title>HOME</title>
 </head>
+
 <body>
     <header>
-        <div>
-            <ul>
-                <li><a href="./">Home</a></li>
-                <li><a href="./login.php">Login</a></li>
-            </ul>
-        </div>
+        <figure>
+            <img src="" alt="logo">
+            <?php
+            if ($login !== 0) {
+                $name = $_SESSION['user']['nome'];
+                echo "<p>$name</p>";
+                echo '<a href="./lib/valida.php?logout">Logout</a>';
+            }
+            ?>
+        </figure>
+        <ul>
+            <li><a href="./">Home</a></li>
+            <?php
+            if ($login === 0) {
+                echo '<li><a href="./login.php">Login</a></li>';
+            }
+            ?>
+        </ul>
     </header>
     <main>
         <section class="principal">
@@ -26,11 +46,14 @@
                 <p> Se você está em busca de comprar ou trocar de carro, você está no lugar certo.</p>
                 <p> Trabalhamos com todas as marcas e modelos de veículos, com compra e venda.</p>
             </div>
+
             <button class="saibaMais">Saiba Mais</button>
         </section>
     </main>
     <footer>
         <p> Desenvolvido por WWWSolutions</p>
     </footer>
+
 </body>
+
 </html>

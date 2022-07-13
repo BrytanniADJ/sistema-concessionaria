@@ -45,6 +45,8 @@ function verificaLogin($login, $password)
                     'tipo' => (int)$row[3]
                 );
             }
+            session_start();
+            $_SESSION['user'] = $usuario;
             $username = $usuario['nome'];
             header("Location: ../bemvindo.php?username=$username");
         }

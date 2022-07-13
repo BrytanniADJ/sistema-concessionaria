@@ -1,9 +1,10 @@
 <?php
 include './lib/utils.php';
 $login = verificaSession();
-$user = '';
-if (isset($_GET) && isset($_GET['username'])) {
-    $user =htmlspecialchars( $_GET['username']);
+
+$recurso = '';
+if (isset($_GET) && isset($_GET['recurso'])) {
+    $recurso = $_GET['recurso'];
 }
 ?>
 
@@ -17,7 +18,7 @@ if (isset($_GET) && isset($_GET['username'])) {
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/stilo.css">
     <script src="./assests/js/script.js" defer></script>
-    <title>Bem-Vindo</title>
+    <title>Acesso Restrito</title>
 </head>
 
 <body>
@@ -34,17 +35,15 @@ if (isset($_GET) && isset($_GET['username'])) {
         </figure>
         <ul>
             <li> <a href="./">Home</a></li>
-            <li> <a href="./users/cadastra.php">Cadastra Usuário</a></li>
-            <li> <a href="./users/lista.php">Lista Usuário</a></li>
         </ul>
     </header>
     <main>
-        <?php
-            if ($user !== '') {
-                echo '<h1> Bem-Vindo </h1>';
-                echo '<h2>' . $user . '</h2>';
-            }
-        ?>
+        <h1> Acesso Restrito</h1>
+        <p> Você não possui permissção para acesso ao recurso
+            <?php
+            echo $recurso;
+            ?>
+        </p>
 
     </main>
     <footer>
