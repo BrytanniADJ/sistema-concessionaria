@@ -1,13 +1,11 @@
 <?php
-$msgErr = '';
-if (isset($_GET) && isset($_GET['error'])) {
-    $msgErr = $_GET['error'];
-}
+    $msgErr = '';
+    if (isset($_GET) && isset($_GET['error'])) {
+        $msgErr = $_GET['error'];
+    }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +15,6 @@ if (isset($_GET) && isset($_GET['error'])) {
     <script src="./assests/js/script.js" defer></script>
     <title>Login</title>
 </head>
-
 <body>
     <header>
         <figure>
@@ -33,14 +30,11 @@ if (isset($_GET) && isset($_GET['error'])) {
                 <label> Login: </label>
                 <input name="login" type="text" id="box_login">
             </p>
-
             <p>
                 <label> Senha: </label>
                 <input name="password" type="password" id="box_ano">
             </p>
-
             <?php
-
             if ($msgErr !== '') {
                 echo '<p>';
                 echo '<label> Erro: ' . $msgErr . '</label>';
@@ -56,8 +50,6 @@ if (isset($_GET) && isset($_GET['error'])) {
 
     </main>
     <footer>
-
     </footer>
 </body>
-
 </html>

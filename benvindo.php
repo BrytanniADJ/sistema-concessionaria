@@ -1,15 +1,17 @@
 <?php
-include './lib/utils.php';
-$login = verificaSession();
-$user = '';
-if (isset($_GET) && isset($_GET['username'])) {
-    $user =htmlspecialchars( $_GET['username']);
-}
+    include './lib/utils.php';
+    $login = verificaSession();
+    $user = '';
+    if (isset($_GET) && isset($_GET['username'])) {
+        $user =htmlspecialchars( $_GET['username']);
+    }
+    if($user === '' && $_SESSION['user']){
+        $user = $_SESSION['user']['nome'];
+    }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +21,6 @@ if (isset($_GET) && isset($_GET['username'])) {
     <script src="./assests/js/script.js" defer></script>
     <title>Bem-Vindo</title>
 </head>
-
 <body>
     <header>
         <figure>
@@ -45,11 +46,8 @@ if (isset($_GET) && isset($_GET['username'])) {
                 echo '<h2>' . $user . '</h2>';
             }
         ?>
-
     </main>
     <footer>
-
     </footer>
 </body>
-
 </html>

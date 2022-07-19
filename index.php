@@ -1,12 +1,9 @@
 <?php
-include './lib/utils.php';
-$login = verificaSession();
-
+    include './lib/utils.php';
+    $login = verificaSession();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,6 +30,8 @@ $login = verificaSession();
             <?php
             if ($login === 0) {
                 echo '<li><a href="./login.php">Login</a></li>';
+            }else {
+                echo '<li><a href="./bemvindo.php">Painel</a></li>';
             }
             ?>
         </ul>
@@ -53,7 +52,5 @@ $login = verificaSession();
     <footer>
         <p> Desenvolvido por WWWSolutions</p>
     </footer>
-
 </body>
-
 </html>
