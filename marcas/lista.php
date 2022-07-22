@@ -4,7 +4,6 @@
     $login = verificaSession();
     $marcas = listarMarcas();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +28,7 @@
             ?>
         </figure>
         <?php
-            exibeMenuSubpasta();
+            exibeMenuSubpasta('.');
         ?>
     </header>
     <main>

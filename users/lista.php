@@ -4,7 +4,6 @@
     $login = verificaSession();
     $users = listarUsers();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +28,7 @@
             ?>
         </figure>
         <?php
-            exibeMenuSubpasta();
+            exibeMenuSubpasta('.');
         ?>
     </header>
     <main>
@@ -68,11 +67,8 @@
             }
             ?>
         </table>
-
     </main>
     <footer>
-
     </footer>
 </body>
-
 </html>

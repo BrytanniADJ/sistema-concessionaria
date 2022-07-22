@@ -1,5 +1,5 @@
 <?php
-    include '../lib/mysqli.php';
+    include '../lib/mysql.php';
     include '../lib/utils.php';
     $login = verificaSession();
 
@@ -24,10 +24,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/stilo.css">
-    <script src="../assests/js/utils.js" defer></script>
+    <script src="../assets/js/utils.js" defer></script>
     <title>Editar Usuário</title>
 </head>
-
 <body>
     <header>
         <figure>
@@ -41,7 +40,7 @@
             ?>
         </figure>
         <?php
-            exibeMenuSubpasta();
+            exibeMenuSubpasta('.');
         ?>
     </header>
     <main>

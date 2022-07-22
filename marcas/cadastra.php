@@ -2,15 +2,14 @@
     include '../lib/utils.php';
     $login = verificaSession();
 ?>
-    <!DOCTYPE html>
-    <html lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/stilo.css">
+    <link rel="stylesheet" href="../assests/css/reset.css">
+    <link rel="stylesheet" href="../assests/css/stilo.css">
     <script src="../assets/js/utils.js" defer></script>
     <title>Cadastrar Carro</title>
 </head>
@@ -27,7 +26,7 @@
             ?>
         </figure>
         <?php
-            exibeMenuSubpasta();
+            exibeMenuSubpasta('.');
         ?>
     </header>
     <main>

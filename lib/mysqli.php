@@ -9,6 +9,22 @@
     $passwordDb = $_ENV['PASSWORD'];
     $database = $_ENV['DATABASE'];
 
+
+    $link = mysqli_connect($host, $userDb, $passwordDb, $database);
+    $listarUsers = CREATE TABLE users (
+      	id INT auto_increment NOT NULL,
+      	login varchar(50) NOT NULL,
+      	password varchar(100) NOT NULL,
+      	nome varchar(50) NOT NULL,
+      	tipo INT NOT NULL,
+      	primary key(id)
+        )
+        ENGINE=InnoDB
+        DEFAULT CHARSET=utf8mb4
+        COLLATE=utf8mb4_general_ci;
+        $result = mysqli_query($link, $listarUsers) or die("Bad create: sql");
+
+
     function conecta()
     {
         $host = $GLOBALS['host'];
@@ -68,7 +84,6 @@
             header("Location: ../login.php?erro=banco");
         }
     }
-
     function listarUsers(){
         $link = conecta();
         $query = "SELECT id, nome, login, tipo FROM users;";
@@ -163,7 +178,6 @@
             header("Location: ../acessorestrito.php?erro=banco");
         }
     }
-
     function listarMarcas(){
         $link = conecta();
         $query = "SELECT id, nome FROM marcas;";

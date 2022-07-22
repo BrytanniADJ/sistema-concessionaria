@@ -1,5 +1,5 @@
 <?php
-    include 'mysql.php';
+    include 'mysqli.php';
     include 'utils.php';
 
     if (isset($_POST) && isset($_POST['login']) && isset($_POST['password'])) {

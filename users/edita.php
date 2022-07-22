@@ -57,7 +57,6 @@
             </p>
             <p>
                 <label> Tipo: </label>
-
                 <?php
                 $lista = [
                     array(
@@ -73,7 +72,6 @@
                         'nome' => 'Funcionário'
                     )
                 ];
-
                 if($editaTipo){
                     echo '<select id="box_tipo" name="tipo" >';
                     for ($i = 0; $i < count($lista); $i++) {
