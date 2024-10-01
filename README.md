@@ -79,7 +79,3 @@ Será necessário adicionar as variavéis de ambiente no Secrets do Github, para
 * ***FTP_PASS***: Referente a senha utilizada para envio dos arquivos ao servidor do InfinityFree, via *FTP*
 
 * ***FTP_USER***: Referente ao usuário utilizado para envio dos arquivos ao Servidor do InfinityFree, via *FTP*
-
-
-## Atualmente disponivél
-Sistema disponivél [http://acai.epizy.com](http://acai.epizy.com)
